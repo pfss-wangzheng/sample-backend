@@ -122,17 +122,6 @@
 			<artifactId>dom4j</artifactId>
 			<version>1.6.1</version>
 		</dependency>
-
-<dependency>
-        <groupId>io.springfox</groupId>
-        <artifactId>springfox-swagger2</artifactId>
-        <version>2.9.2</version> <!-- 例如：2.9.2 -->
-    </dependency>
-   <dependency>
-        <groupId>io.springfox</groupId>
-        <artifactId>springfox-swagger-ui</artifactId>
-        <version>2.9.2</version> <!-- 例如：2.9.2，应与swagger2版本一致 -->
-    </dependency>
 	</dependencies>
 
 	<build>
