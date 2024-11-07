@@ -4,13 +4,13 @@ info:
   version: 1.0.0
   description: test
 servers:
-  - url: 'http://localhost:8080' # 假设你的Spring Boot应用运行在本地的8080端口
+  - url: 'http://localhost:8081'
     description: Local server
 paths:
   /hello:
     get:
-      summary: return "Hello, World!"
-      operationId: hello
+      summary: return "helloword1"
+      operationId: hello1
       responses:
         '200':
           description: success response
