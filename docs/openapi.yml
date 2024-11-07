@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: Test Spring Boot API
+  version: 1.0.0
+  description: test
+servers:
+  - url: 'http://localhost:8080' # 假设你的Spring Boot应用运行在本地的8080端口
+    description: Local server
+paths:
+  /hello:
+    get:
+      summary: return "Hello, World!"
+      operationId: hello
+      responses:
+        '200':
+          description: success response
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Hello, World!
