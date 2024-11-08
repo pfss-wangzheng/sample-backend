@@ -17,13 +17,17 @@
     <script>
     window.onload = () => {
         window.ui = SwaggerUIBundle({
-        url: 'openapi.yml',
+        url: new URL(location).searchParams.get('q') || 'openapi.yml',
         deepLinking: true,
         dom_id: '#swagger-ui',
         presets: [
           SwaggerUIBundle.presets.apis,
           SwaggerUIStandalonePreset
         ],
+		plugins: [
+          SwaggerUIBundle.plugins.DownloadUrl
+        ],
+		layout: "StandaloneLayout",
         });
     };
     </script>
