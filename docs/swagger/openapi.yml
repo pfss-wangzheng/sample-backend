@@ -9,8 +9,8 @@ servers:
 paths:
   /hellow:
     get:
-      summary: return "hellowword"
-      operationId: helloword
+      summary: return "hellow　world"
+      operationId: hellowworld
       responses:
         '200':
           description: success response
