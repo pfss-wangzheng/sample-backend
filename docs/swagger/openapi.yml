@@ -4,13 +4,13 @@ info:
   version: 1.0.0
   description: test
 servers:
-  - url: 'http://localhost:8081'
+  - url: 'http://localhost:8080'
     description: Local server
 paths:
-  /hello:
+  /hellow:
     get:
-      summary: return "helloword1"
-      operationId: hello1
+      summary: return "hellowword"
+      operationId: helloword
       responses:
         '200':
           description: success response
@@ -18,4 +18,4 @@ paths:
             text/plain:
               schema:
                 type: string
-                example: Hello, World!
+                example: Hellow, World!
