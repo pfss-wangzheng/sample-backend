@@ -49,17 +49,18 @@ paths:
       summary: Create a new lnb user
       description: Create a new lnb user into LNB system
       operationId: createUser
-      parameters:
-        - name: name
-          in: header
-          description: Name of user
-          schema:
-            type: string
-        - name: email
-          in: header
-          description: Email of user
-          schema:
-            type: string
+      requestBody:
+        description: Created user object
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
       responses:
         '201':
           description: The user was successfully created
@@ -98,7 +99,7 @@ components:
           example: success
         message:
           type: string
-          description: A confirmation message
+          description: create status message
           example: User created successfully
         user:
           $ref: '#/components/schemas/User'
