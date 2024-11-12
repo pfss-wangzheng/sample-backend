@@ -46,9 +46,7 @@ paths:
                 $ref: '#/components/schemas/User'
             examples:
                application/json:
-                 - id: 1
-                   name: Smith
-                   email: Smith@panasonic.com
+                  { "id": 1, "name": "Smith", "email": "Smith@panasonic.com" }
 components:
   schemas:
     User:
