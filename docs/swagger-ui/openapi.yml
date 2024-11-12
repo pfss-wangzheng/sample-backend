@@ -37,11 +37,40 @@ paths:
       operationId: getAllUsersInfo
       responses:
         '200':
-          description: success response
+          description: get user success
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/User'
+  /users/create:
+    post:
+      tags:
+        - User
+      summary: Create a new lnb user
+      description: Create a new lnb user into LNB system
+      operationId: createUser
+      parameters:
+        - name: name
+          in: header
+          description: Name of user
+          schema:
+            type: string
+        - name: email
+          in: header
+          description: Email of user
+          schema:
+            type: string
+      responses:
+        '201':
+          description: The user was successfully created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+        '400':
+          description: Bad request (e.g., invalid input)
+        '500':
+          description: Internal server error
 components:
   schemas:
     User:
@@ -60,3 +89,16 @@ components:
           type: string
           description: User Email
           example: Smith@panasonic.com
+    UserResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: The status of the user creation request
+          example: success
+        message:
+          type: string
+          description: A confirmation message
+          example: User created successfully
+        user:
+          $ref: '#/components/schemas/User'
