@@ -41,8 +41,6 @@ paths:
           content:
             application/json:
               schema:
-              type: array
-              items:
                 $ref: '#/components/schemas/User'
 components:
   schemas:
@@ -50,16 +48,15 @@ components:
       type: object
       properties:
         id:
-          type: Integer
+          type: integer
           format: int64
           description: User ID
           example: 1
         name:
-          type: String
+          type: string
           description: User Name
-          example: "Smith"
+          example: Smith
         email:
-          type: String
-          format: email
+          type: string
           description: User Email
-          example: "Smith@panasonic.com"
+          example: Smith@panasonic.com
