@@ -20,12 +20,12 @@ tags:
   - name: User
     description: Everything about user
     externalDocs:
-      description: Find out more
+      description: Find out more about swagger
       url: http://swagger.io
   - name: Products
     description: Everything about products
     externalDocs:
-      description: Find out more about our store
+      description: Find out more about swagger
       url: http://swagger.io
 paths:
   /users:
@@ -44,9 +44,6 @@ paths:
               type: array
               items:
                 $ref: '#/components/schemas/User'
-            examples:
-               application/json:
-                  { "id": 1, "name": "Smith", "email": "Smith@panasonic.com" }
 components:
   schemas:
     User:
@@ -56,10 +53,13 @@ components:
           type: Integer
           format: int64
           description: User ID
+          example: 1
         name:
           type: String
           description: User Name
+          example: "Smith"
         email:
           type: String
           format: email
           description: User Email
+          example: "Smith@panasonic.com"
