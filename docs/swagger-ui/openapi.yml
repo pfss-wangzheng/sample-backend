@@ -72,6 +72,24 @@ paths:
           description: Bad request (e.g., invalid input)
         '500':
           description: Internal server error
+  /users/delete:
+    delete:
+      tags:
+        - User
+      summary: Delete exist lnb user
+      description: Delete existing lnb user from system by username 
+      operationId: deleteUser
+      parameters:
+        - name: name
+          in: header
+          description: Name of user
+          required: true
+          schema:
+            type: string
+      responses:
+        responses:
+        '400':
+          description: Invalid user name
 components:
   schemas:
     User:
