@@ -85,7 +85,7 @@ paths:
           description: ID of user
           required: true
           schema:
-            type: int64
+            type: integer
       responses:
         '400':
           description: Invalid user name
