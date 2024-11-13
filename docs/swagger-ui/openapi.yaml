@@ -3,7 +3,7 @@ info:
   title: PFSS Swagger LNB API - OpenAPI 3.0
   description: |-
     This is a LNB server based on the OpenAPI 3.0 specification.
-  termsOfService: http://localhost:8080/terms/
+  termsOfService: http://10.194.98.98:8080/terms/
   contact:
     email: pfss@cn.panasonic.com
   license:
